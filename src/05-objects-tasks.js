@@ -51,21 +51,22 @@ function getJSON(obj) {
  *    const r = fromJSON(Circle.prototype, '{"radius":10}');
  *
  */
-function fromJSON(proto, json) {
-  const props = JSON.parse(json);
-  const obj = Object.create(proto);
-  const arr = Object.keys(props);
+function fromJSON(/* proto, json */) {
+  // const props = JSON.parse(json);
+  // const obj = Object.create(proto);
+  // const arr = Object.keys(props);
 
-  arr.map((prop) =>
-    Object.defineProperty(obj, prop, {
-      value: props[prop],
-      writable: true,
-      enumerable: true,
-      configurable: true,
-    })
-  );
+  // arr.map((prop) =>
+  //   Object.defineProperty(obj, prop, {
+  //     value: props[prop],
+  //     writable: true,
+  //     enumerable: true,
+  //     configurable: true,
+  //   })
+  // );
 
-  return obj;
+  // return obj;
+  throw new Error('Not implemented');
 }
 
 /**
